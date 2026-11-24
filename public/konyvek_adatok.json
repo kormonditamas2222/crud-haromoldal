@@ -1,0 +1,94 @@
+{
+  "konyvek": [
+    {
+      "id": 1,
+      "cim": "A csillagok örökösei",
+      "oldalszam": 412,
+      "kiadas_datuma": "2023-04-18",
+      "keszleten": true,
+      "szerzo": "Kovács Gábor",
+      "mufaj": "Sci-fi"
+    },
+    {
+      "id": 2,
+      "cim": "Árnyék a Duna felett",
+      "oldalszam": 328,
+      "kiadas_datuma": "2022-11-05",
+      "keszleten": true,
+      "szerzo": "Szabó Eszter",
+      "mufaj": "Krimi"
+    },
+    {
+      "id": 3,
+      "cim": "Az elveszett krónika",
+      "oldalszam": 540,
+      "kiadas_datuma": "2024-02-22",
+      "keszleten": false,
+      "szerzo": "Tóth Bence",
+      "mufaj": "Fantasy"
+    },
+    {
+      "id": 4,
+      "cim": "Csendes vizeken",
+      "oldalszam": 264,
+      "kiadas_datuma": "2021-06-14",
+      "keszleten": true,
+      "szerzo": "Nagy Anna",
+      "mufaj": "Dráma"
+    },
+    {
+      "id": 5,
+      "cim": "A kód titka",
+      "oldalszam": 389,
+      "kiadas_datuma": "2025-01-10",
+      "keszleten": false,
+      "szerzo": "Horváth Dániel",
+      "mufaj": "Thriller"
+    },
+    {
+      "id": 6,
+      "cim": "Őszi levelek Párizsban",
+      "oldalszam": 295,
+      "kiadas_datuma": "2020-09-30",
+      "keszleten": true,
+      "szerzo": "Kiss Réka",
+      "mufaj": "Romantikus"
+    },
+    {
+      "id": 7,
+      "cim": "A hetedik pecsét",
+      "oldalszam": 476,
+      "kiadas_datuma": "2023-08-12",
+      "keszleten": true,
+      "szerzo": "Varga Péter",
+      "mufaj": "Történelmi"
+    },
+    {
+      "id": 8,
+      "cim": "Digitális horizont",
+      "oldalszam": 350,
+      "kiadas_datuma": "2024-10-03",
+      "keszleten": true,
+      "szerzo": "Molnár Zsófia",
+      "mufaj": "Ismeretterjesztő"
+    },
+    {
+      "id": 9,
+      "cim": "Éjféli expressz",
+      "oldalszam": 310,
+      "kiadas_datuma": "2022-03-27",
+      "keszleten": false,
+      "szerzo": "Farkas Tamás",
+      "mufaj": "Krimi"
+    },
+    {
+      "id": 10,
+      "cim": "A sivatag vándora",
+      "oldalszam": 498,
+      "kiadas_datuma": "2025-05-19",
+      "keszleten": true,
+      "szerzo": "Balogh Luca",
+      "mufaj": "Kaland"
+    }
+  ]
+}

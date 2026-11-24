@@ -1,0 +1,17 @@
+Az órán tanult módszerekkel, saját témában készíts webes alkalmazást!
+
+Specifikációk:
+ - jsonserver segítségével fetch-elj adatokat,
+ - a json tartalmazzon az ID-n kívül minimum egy szám, egy szöveg, egy dátum, egy logikai mezőt és 1-2 bármilyen tipusút!
+ - a json fájlban legyen legalább 10 mintarekord!
+
+ - készíts admin oldalt, ami tud listázni, felvenni, törölni, a logikai mezőt kapcsolgatni, a number tipusú értéket növelni/csökkenteni/stb...
+ - készíts moderátor oldalt, ami csak listázni, logikai mezőt kapcsolgatni, number tipusú értéket növelni/csökkenteni/stb...
+ - készíts user oldalt, ami csak listázni tud
+ - az oldalak közötti navigációt komponens memóriával valósítsd meg!
+
+ - a funkciókat külön fájlba szervezd ki, pl.: /api/api.ts, vagy /utility/utility.ts
+ - A components mappában hozz létre egy külön mappát (felhasználó kezelés esetén pl: user), azon belül legyenek ezek a komponensek
+ - a kinézet legyen igényes, bootstrap alapú
+
+ - AI használat csak adatgeneráláshoz használható
