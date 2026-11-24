@@ -6,6 +6,7 @@ import { KonyvRow } from './components/KonyvRow';
 function App() {
   const [oldalAllapot, setOldal] = useState("Felhasználó");
   const [konyvek, setKonyvek] = useState<Konyv[]>([]);
+  const [trigger, setTrigger] = useState(false);
   useEffect(() => {
     async function load() {
       try {
@@ -23,7 +24,7 @@ function App() {
       }
     }
     load()
-  } ,[])
+  }, [trigger])
   return (
     <>
       <div className="container">
@@ -44,31 +45,53 @@ function App() {
           </nav>
         </header>
         <main>
-          {oldalAllapot == "Felhasználó" ? 
-          <>
-            <h2>Könyveink listája</h2>
-            <table className="table table-hover table-bordered">
-              <thead>
-                <tr>
-                  <th>Cím</th>
-                  <th>Oldalak száma</th>
-                  <th>Kiadás dátuma</th>
-                  <th>Készleten van</th>
-                  <th>Szerző</th>
-                  <th>Műfaj</th>
-                </tr>
-              </thead>
-              <tbody>
-                {konyvek.map(konyv => (
-                  <KonyvRow konyv={konyv}/>
-                ))}
-              </tbody>
-            </table>
-          </>
-          : oldalAllapot == "Moderátor" ? <>
-          </>
-          : <>
-          </>}
+          {oldalAllapot == "Felhasználó" ?
+            <>
+              <h2>Könyveink listája</h2>
+              <table className="table table-hover table-bordered">
+                <thead>
+                  <tr>
+                    <th>Cím</th>
+                    <th>Oldalak száma</th>
+                    <th>Kiadás dátuma</th>
+                    <th>Készleten van</th>
+                    <th>Szerző</th>
+                    <th>Műfaj</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {konyvek.map(konyv => (
+                    <KonyvRow konyv={konyv} oldal={oldalAllapot} setTrigger={setTrigger}/>
+                  ))}
+                </tbody>
+              </table>
+            </>
+            : oldalAllapot == "Moderátor" ?
+              <>
+                <h2>Könyveink listája</h2>
+                <table className="table table-hover table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Cím</th>
+                      <th>Oldalak száma</th>
+                      <th>Kiadás dátuma</th>
+                      <th>Készleten van</th>
+                      <th>Szerző</th>
+                      <th>Műfaj</th>
+                      <th>Műveletek</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {konyvek.map(konyv => (
+                      <KonyvRow konyv={konyv} oldal={oldalAllapot} setTrigger={setTrigger}/>
+                    ))}
+                  </tbody>
+                </table>
+              </>
+              : 
+              <>
+
+              </>}
         </main>
       </div>
     </>
