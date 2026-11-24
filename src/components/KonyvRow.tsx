@@ -2,7 +2,7 @@ import type { Konyv } from "../types/Konyv";
 import { handleAllapotValtozas, handleArCsokkentes, handleArNoveles } from "../utils/utils";
 
 export function KonyvRow(props: {konyv: Konyv, oldal: string, setTrigger: React.Dispatch<React.SetStateAction<boolean>>}) {
-    return (<tr key={props.konyv.id}>
+    return (<tr>
         <td>{props.konyv.cim}</td>
         <td>{props.konyv.ar}</td>
         <td>{props.konyv.kiadas_datuma.toString()}</td>

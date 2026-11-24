@@ -7,6 +7,12 @@ function App() {
   const [oldalAllapot, setOldal] = useState("Felhasználó");
   const [konyvek, setKonyvek] = useState<Konyv[]>([]);
   const [trigger, setTrigger] = useState(false);
+  const [cim, setCim] = useState("");
+  const [ar, setAr] = useState(0);
+  const [kiadas_datuma, setKiadasDatuma] = useState<Date>();
+  const [keszleten, setKeszleten] = useState<boolean>();
+  const [szerzo, setSzerzo] = useState("");
+  const [mufaj, setMufaj] = useState("");
   useEffect(() => {
     async function load() {
       try {
@@ -61,7 +67,7 @@ function App() {
                 </thead>
                 <tbody>
                   {konyvek.map(konyv => (
-                    <KonyvRow konyv={konyv} oldal={oldalAllapot} setTrigger={setTrigger}/>
+                    <KonyvRow key={konyv.id} konyv={konyv} oldal={oldalAllapot} setTrigger={setTrigger}/>
                   ))}
                 </tbody>
               </table>
@@ -83,14 +89,41 @@ function App() {
                   </thead>
                   <tbody>
                     {konyvek.map(konyv => (
-                      <KonyvRow konyv={konyv} oldal={oldalAllapot} setTrigger={setTrigger}/>
+                      <KonyvRow key={konyv.id} konyv={konyv} oldal={oldalAllapot} setTrigger={setTrigger}/>
                     ))}
                   </tbody>
                 </table>
               </>
               : 
               <>
-
+                <h2>Könyveink listája</h2>
+                <table className="table table-hover table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Cím</th>
+                      <th>Oldalak száma</th>
+                      <th>Kiadás dátuma</th>
+                      <th>Készleten van</th>
+                      <th>Szerző</th>
+                      <th>Műfaj</th>
+                      <th>Műveletek</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {konyvek.map(konyv => (
+                      <KonyvRow key={konyv.id} konyv={konyv} oldal={oldalAllapot} setTrigger={setTrigger}/>
+                    ))}
+                  </tbody>
+                </table>
+                <h2>Új könyv felvétele</h2>
+                <form>
+                    <label htmlFor="cim" className="form-label"></label>
+                    <input type="text" name="cim" value={cim} onChange={(e) => setCim(e.target.value)}/>
+                    <label htmlFor="ar" className="form-label"></label>
+                    <input type="text" name="ar" value={ar} onChange={(e) => setAr(Number.isNaN(parseInt(e.target.value)) ? 0 : parseInt(e.target.value))}/>
+                    <label htmlFor="kiadas_datuma" className="form-label"></label>
+                    <input type="datetime" name="ar" value={kiadas_datuma?.toString()} onChange={(e) => setKiadasDatuma(new Date(e.target.value))}/>
+                </form>
               </>}
         </main>
       </div>
